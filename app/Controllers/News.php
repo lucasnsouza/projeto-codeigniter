@@ -53,7 +53,7 @@ class News extends BaseController
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug' => url_title($this->request->getPost('title'), '-', true),
-                'bodey' => $this->request->getPost('body'),
+                'body' => $this->request->getPost('body'),
             ]);
 
             echo view('news/success');
