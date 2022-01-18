@@ -32,6 +32,8 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->post('/news/create', 'News::create');
+$routes->get('/news/create', 'News::create');
 $routes->get('/news/(:segment)', 'News::view/$1');
 $routes->get('/news', 'News::index');
 //will match all characters from that point to the end of the URI. This may include multiple URI segments.
