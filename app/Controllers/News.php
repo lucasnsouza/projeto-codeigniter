@@ -23,7 +23,7 @@ class News extends BaseController
         echo view('templates/footer', $data);
     }
 
-    public function views($slug = null) 
+    public function view($slug = null) 
     {
         //esse método busca uma notícia pelo slug
         $model = model(NewsModel::class);
